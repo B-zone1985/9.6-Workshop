@@ -21,11 +21,11 @@ namespace Task2
             }
 
             FamilySorted familySorted = new FamilySorted(); /// создаем экземляр класса
-            familySorted.FamilySortedEvent += ShowNuber;
 
             try /// проверяем на правильность ввденого формата
             {
                 familySorted.Read();
+
             }
             catch (FormatException)
             {
@@ -47,25 +47,6 @@ namespace Task2
             {
                 Console.WriteLine(fName);
             }
-
-            static void ShowNuber(int number)
-            {
-                switch (number)
-                {
-                    case 1:
-                        ListFirstName.Sort(); /// сортируем список
-                        foreach (string fName in ListFirstName)
-                        {
-                            Console.WriteLine(fName);
-                        }
-
-                        break;
-                    case 2: Console.WriteLine("2"); break;
-                }
-            }
-
-
-
         }
     }
 
